@@ -4,8 +4,14 @@ $(function() {
 
   $('.top-level').find('li').append($subdirectories);
 
-  $('.top-level').on('click', 'li', function(e) {
+  $('.file-tree').on('click', 'li', function(e) {
     $(e.target).children('ul').first().toggle();
+    $('.selected').removeClass('selected');
+    $(e.target).addClass('selected');
+    if ( $(e.target).parent().has('ul').length > 0 ) {
+      $(e.target).toggleClass('opened-folder');
+    }
+    return false;
   });
 
   $('.subfolder').on('click', 'li', function(e) {
@@ -13,5 +19,11 @@ $(function() {
   });
 
 
+  $('.private').on('click', function() {
+    passwordPrompt();
+  })
+  var passwordPrompt = function() {
+    $('.private').on('click', prompt("Please enter your password:"));
+  }
 
 })
