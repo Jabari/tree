@@ -31,8 +31,20 @@
   width: 100%; }
   #file-system .file-tree ul.top-level, #file-system .file-tree ul .subfolder:first-child {
     list-style-image: url(/images/blue-folder.png); }
+    #file-system .file-tree ul.top-level li::before, #file-system .file-tree ul .subfolder:first-child li::before {
+      content: attr(data-content) url(/images/open.png);
+      position: relative;
+      right: 3em; }
+    #file-system .file-tree ul.top-level li.opened-folder::before, #file-system .file-tree ul .subfolder:first-child li.opened-folder::before {
+      content: attr(data-content) url(/images/close.png);
+      position: relative;
+      right: 3em; }
   #file-system .file-tree ul .subfolder:nth-child(2) {
     list-style-image: url(/images/file.png); }
+    #file-system .file-tree ul .subfolder:nth-child(2) li::before {
+      content: ''; }
+  #file-system .file-tree ul li .selected {
+    background: #8ee9f5; }
   #file-system .file-tree ul .private {
     list-style-image: url(/images/red-folder.png); }
   #file-system .file-tree .subfolder {
