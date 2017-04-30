@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <title>DOM Tree as a File System</title>
+  </head>
+  <body id="file-system">
+    <div class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Title</h4>
+          </div>
+          <div class="modal-header directory-name">
+            <input type="text" placeholder="Label" />
+          </div>
+          <div class="modal-body">
+            <div class="file-tree">
+              <ul class="top-level">
+                <li>Folder One</li>
+                <li>Folder Two</li>
+                <li>Folder Three</li>
+                <li>Folder Four</li>
+                <li class="private">Private Folder</li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="" class="left">Link</a>
+            <button type="button" class="btn btn-primary">Done</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script id="subdirectory-template" type="text/x-custom-template">
+      <ul class="subfolder">
+        <li>Sub-Folder One</li>
+        <ul class="subfolder">
+          <li>List One</li>
+          <li>List Two</li>
+          <li>List Three</li>
+        </ul>
+      </ul>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/scripts.js" type="text/javascript"></script>
+  </body>
+</html>

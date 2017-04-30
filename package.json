@@ -1,0 +1,17 @@
+{
+  "name": "tree",
+  "version": "1.0.0",
+  "description": "dom tree as a file system",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "build": "node-sass --include-path scss styles.scss styles.css",
+    "watch": "nodemon -e styles.scss -x \"npm run build\""
+  },
+  "author": "jabari",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.5.2",
+    "nodemon": "^1.11.0"
+  }
+}

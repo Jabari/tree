@@ -1,0 +1,39 @@
+#file-system .modal {
+  display: block; }
+  #file-system .modal-dialog {
+    margin: 10vh auto;
+    width: 25%; }
+  #file-system .modal-header {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #eeeeee));
+    background: linear-gradient(182deg, white 0%, #eeeeee 100%);
+    height: 4em; }
+    #file-system .modal-header.directory-name {
+      background: #fff;
+      box-shadow: #eee 0px 2px 5px 1px;
+      color: #aaa;
+      text-transform: capitalize;
+      height: 3em;
+      padding: 0;
+      width: 100%; }
+      #file-system .modal-header.directory-name input {
+        border: none;
+        color: inherit;
+        text-transform: inherit;
+        height: inherit;
+        padding: 1em;
+        width: inherit; }
+  #file-system .modal-body {
+    height: 60vh; }
+  #file-system .modal-footer .left {
+    float: left; }
+
+#file-system .file-tree {
+  width: 100%; }
+  #file-system .file-tree ul.top-level, #file-system .file-tree ul .subfolder:first-child {
+    list-style-image: url(/images/blue-folder.png); }
+  #file-system .file-tree ul .subfolder:nth-child(2) {
+    list-style-image: url(/images/file.png); }
+  #file-system .file-tree ul .private {
+    list-style-image: url(/images/red-folder.png); }
+  #file-system .file-tree .subfolder {
+    display: none; }
